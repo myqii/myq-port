@@ -1,550 +1,748 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muhammad Rizqih Ramadhan — UI Designer & Frontend Portfolio">
-  <title>Muhammad Rizqih Ramadhan — UI Designer Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Muhammad Rizqih Ramadhan — UI Designer &amp; Frontend Portfolio" name="description"/>
+<title>Muhammad Rizqih Ramadhan — UI Designer Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- ===================== LOADING SCREEN ===================== -->
-  <div id="loading-screen" aria-label="Loading portfolio">
-    <div class="loading-bg"></div>
-    <div class="loading-overlay"></div>
-
-    <div class="loading-content">
-      <div class="loading-logo">
-        <img src="asset/logo.png" alt="MR Logo">
-      </div>
-
-      <div class="loading-title">PORTOFOLIO</div>
-
-      <div class="loading-track-wrap">
-        <div class="runner" id="runner" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.5 5.5C14.3 5.5 15 4.8 15 4C15 3.2 14.3 2.5 13.5 2.5C12.7 2.5 12 3.2 12 4C12 4.8 12.7 5.5 13.5 5.5Z" fill="currentColor"/>
-            <path d="M9.8 8.9L7 23H9.1L11 15L13.1 17V23H15.2V15.5L13.1 13.5L13.7 10.5C15 12 17 13 19.5 13V11C17.5 11 15.8 10 15 8.6L14 6.9C13.6 6.3 13 6 12.3 6C12 6 11.8 6.1 11.5 6.1L6 8.3V13H8V9.6L9.8 8.9Z" fill="currentColor"/>
-          </svg>
-        </div>
-
-        <div class="track">
-          <div class="track-fill" id="track-fill"></div>
-        </div>
-
-        <div class="flag" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="11" y="2" width="1.6" height="20" fill="currentColor"/>
-            <path d="M12.6 3L20 5.5L12.6 8V3Z" fill="currentColor"/>
-            <rect x="9" y="21" width="6" height="1.6" fill="currentColor"/>
-          </svg>
-        </div>
-      </div>
-
-      <div class="loading-percent" id="loading-percent">0%</div>
-    </div>
-  </div>
-
-  <!-- ===================== MAIN SITE ===================== -->
-  <div id="main-site">
-    <header class="navbar-container" id="navbar">
-      <a href="#home" class="logo" aria-label="Go to Home">
-        <img src="asset/logo.png" alt="Logo MR" class="logo-img">
-      </a>
-
-      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Project</a>
-        <a href="#contact">Contact Us</a>
-        <div class="nav-hire-mobile">
-          <a href="#contact" class="btn-hire">Hire Me</a>
-        </div>
-      </nav>
-
-      <div class="nav-btn">
-        <a href="#contact" class="btn-hire">Hire Me</a>
-      </div>
-
-      <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-      </button>
-    </header>
-
-    <main>
-      <!-- ===================== HERO ===================== -->
-      <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-sweep"></div>
-        <div class="hero-grain"></div>
-
-        <div class="hero-inner">
-          <div class="hero-intro reveal">
-            <!-- <span>UI Designer</span>
+<!-- ===================== LOADING SCREEN ===================== -->
+<div aria-label="Loading portfolio" id="loading-screen">
+<div class="loading-bg"></div>
+<div class="loading-overlay"></div>
+<div class="loading-content">
+<div class="loading-logo">
+<img alt="MR Logo" src="asset/logo.png"/>
+</div>
+<div class="loading-title">PORTOFOLIO</div>
+<div class="loading-track-wrap">
+<div aria-hidden="true" class="runner" id="runner">
+<svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 5.5C14.3 5.5 15 4.8 15 4C15 3.2 14.3 2.5 13.5 2.5C12.7 2.5 12 3.2 12 4C12 4.8 12.7 5.5 13.5 5.5Z" fill="currentColor"></path>
+<path d="M9.8 8.9L7 23H9.1L11 15L13.1 17V23H15.2V15.5L13.1 13.5L13.7 10.5C15 12 17 13 19.5 13V11C17.5 11 15.8 10 15 8.6L14 6.9C13.6 6.3 13 6 12.3 6C12 6 11.8 6.1 11.5 6.1L6 8.3V13H8V9.6L9.8 8.9Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="track">
+<div class="track-fill" id="track-fill"></div>
+</div>
+<div aria-hidden="true" class="flag">
+<svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect fill="currentColor" height="20" width="1.6" x="11" y="2"></rect>
+<path d="M12.6 3L20 5.5L12.6 8V3Z" fill="currentColor"></path>
+<rect fill="currentColor" height="1.6" width="6" x="9" y="21"></rect>
+</svg>
+</div>
+</div>
+<div class="loading-percent" id="loading-percent">0%</div>
+</div>
+</div>
+<!-- ===================== MAIN SITE ===================== -->
+<div id="main-site">
+<header class="navbar-container" id="navbar">
+<a aria-label="Go to Home" class="logo" href="#home">
+<img alt="Logo MR" class="logo-img" src="asset/logo.png"/>
+</a>
+<nav aria-label="Main navigation" class="nav-links" id="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Project</a>
+<a href="#contact">Contact Us</a>
+<div class="nav-hire-mobile">
+<a class="btn-hire" href="#contact">Hire Me</a>
+</div>
+</nav>
+<div class="nav-btn">
+<a class="btn-hire" href="#contact">Hire Me</a>
+</div>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="nav-toggle">
+<span></span><span></span><span></span>
+</button>
+</header>
+<main>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-sweep"></div>
+<div class="hero-grain"></div>
+<div class="hero-inner">
+<div class="hero-intro reveal">
+<!-- <span>UI Designer</span>
             <span class="cursor">|</span> -->
-          </div>
-
-          <div class="hero-stage">
-            <img src="asset/PORTFOLIO.png" alt="Portfolio" class="portfolio-image">
-            <div class="hero-person">
-              <img src="asset/gua.png" alt="Profile" class="person-image">
-            </div>
-          </div>
-
-          <div class="hero-bottom">
-            <a href="#about" class="hero-scroll" aria-label="Scroll to About">
-              <span>↓</span> Scroll Down
+</div>
+<div class="hero-stage">
+<img alt="Portfolio" class="portfolio-image" src="asset/PORTFOLIO.png"/>
+<div class="hero-person">
+<img alt="Profile" class="person-image" src="asset/gua.png"/>
+</div>
+</div>
+<div class="hero-bottom">
+<a aria-label="Scroll to About" class="hero-scroll" href="#about">
+<span>↓</span> Scroll Down
             </a>
-
-            <div class="hero-copy reveal">
-              <p class="hero-desc">
+<div class="hero-copy reveal">
+<p class="hero-desc">
                 Mahasiswa Informatika fokus pada frontend modern, responsive grid, micro-interactions, dan UI premium responsif.
               </p>
-              <a href="CV muhammaad rizqih ramadhan UI Frontend.pdf" class="btn btn-primary" download>
+<a class="btn btn-primary" download="" href="CV muhammaad rizqih ramadhan UI Frontend.pdf">
                 DOWNLOAD CV
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== ABOUT ===================== -->
-      <section id="about" class="about-section reveal">
-        <div class="about-visual">
-          <div class="about-red-panel"></div>
-          <img src="asset/gua.png" alt="Profile Photo" class="about-photo">
-          <div class="about-signature">
-            <img src="asset/ttd.png" alt="Rizqi Signature">
-          </div>
-        </div>
-
-        <div class="about-content">
-          <div class="about-label">ABOUT ME</div>
-          <h2 class="about-title">
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== ABOUT ===================== -->
+<section class="about-section reveal" id="about">
+<div class="about-visual">
+<div class="about-red-panel"></div>
+<img alt="Profile Photo" class="about-photo" src="asset/gua.png"/>
+<div class="about-signature">
+<img alt="Rizqi Signature" src="asset/ttd.png"/>
+</div>
+</div>
+<div class="about-content">
+<div class="about-label">ABOUT ME</div>
+<h2 class="about-title">
             Engineering <span>The Digital Future</span>
-          </h2>
-          <p class="about-description">
+</h2>
+<p class="about-description">
             Saya adalah mahasiswa Informatika di Universitas Bina Sarana Informatika yang memiliki minat tinggi dan pengalaman praktis dalam rekayasa frontend, pembuatan website modern responsif, UI/UX design, dan implementasi teknologi web terkini. Saya berkomitmen penuh untuk terus beradaptasi dengan tren industri dan berkontribusi secara nyata di dunia teknologi informasi.
           </p>
+<h3 class="details-title">Personal <span>Details</span></h3>
+<div class="details-grid">
+<div class="detail-column">
+<div class="detail-item">
+<span class="detail-label">Name</span>
+<span class="detail-value">Muhammad Rizqih Ramadhan</span>
+</div>
+<div class="detail-item">
+<span class="detail-label">Phone</span>
+<span class="detail-value">+62 851-3495-3049</span>
+</div>
+<div class="detail-item">
+<span class="detail-label">Place of Birth</span>
+<span class="detail-value">Depok, Jawa Barat</span>
+</div>
+</div>
+<div class="detail-column">
+<div class="detail-item">
+<span class="detail-label">IPK</span>
+<span class="detail-value">3.71</span>
+</div>
+<div class="detail-item">
+<span class="detail-label">Education</span>
+<span class="detail-value">Universitas Bina Sarana Informatika</span>
+</div>
+<div class="detail-item connect-item">
+<span class="detail-label">Connect</span>
+<div class="social-links">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/muhammad-rizqih-ramadhan-4406862ba/" rel="noopener" target="_blank">in</a>
+<a aria-label="Instagram" href="https://www.instagram.com/myqisites/" rel="noopener" target="_blank">◎</a>
+<a aria-label="Email" href="mailto:mhmdrizqih.rn@gmail.com">✉</a>
+</div>
+</div>
+</div>
+</div>
+<div class="about-stats">
+<div class="stat-card active">
+<div class="stat-number">
+<span class="num" data-count="14">0</span>
+</div>
+<h3>Projects Finished</h3>
+<p>Interactive and modern apps</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">
+<span class="num" data-count="5">0</span>
+</div>
+<h3>Certificates Earned</h3>
+<p>Competency verified badges</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== SKILLS ===================== -->
+<section class="skills" id="skills">
+<div class="container">
+<div class="section-head">
+<span class="section-tag reveal">Abilities &amp; Skills</span>
+<h2 class="reveal">Technical <span class="accent">Frameworks</span></h2>
+<p class="reveal">Kumpulan teknologi dasar dan lanjutan yang saya gunakan untuk mengimplementasikan solusi visual interaktif dan andal.</p>
+</div>
+<div class="skills-grid">
+<div class="skill-card reveal" data-percent="95">
+<div class="skill-top">
+<div><h4>HTML5 &amp; CSS3</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="28" icon="simple-icons:html5" style="color: #ff3700;" width="28"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>95%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="80">
+<div class="skill-top">
+<div><h4>Bootstrap</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="bi:bootstrap-fill" style="color: #6600ff;" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>80%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="100">
+<div class="skill-top">
+<div><h4>Figma</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="logos:figma" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>100%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="75">
+<div class="skill-top">
+<div><h4>GitHub</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="bi:github" style="color: #ffffff;" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>75%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="100">
+<div class="skill-top">
+<div><h4>Canva</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="simple-icons:canva" style="color: #00e5ff;" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>100%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="90">
+<div class="skill-top">
+<div><h4>Ibis Paint</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="lucide:brush" style="color: #d4990f;" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>90%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="50">
+<div class="skill-top">
+<div><h4>Java</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="fa6-brands:java" style="color: #ff7b00;" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>50%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+<div class="skill-card reveal" data-percent="50">
+<div class="skill-top">
+<div><h4>Python</h4><span>Estimated Ability</span></div>
+<div class="skill-icon"><iconify-icon height="26" icon="simple-icons:python" style="color: #6600ff;" width="26"></iconify-icon></div>
+</div>
+<div class="skill-meta"><span>Expertise Level</span><span>50%</span></div>
+<div class="skill-bar"><div class="skill-bar-fill"></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================== PROJECTS ===================== -->
+<section class="projects" id="projects">
+<div class="container">
+<div class="section-head">
+<span class="section-tag reveal">Curated Case Studies</span>
+<h2 class="reveal">Featured <span class="accent">Projects &amp; Certificates</span></h2>
+<p class="reveal">Galeri karya pilihan mencakup sistem antarmuka web, integrasi database, hingga sertifikasi kompetensi resmi.</p>
+</div>
+<div class="filter-row reveal">
+<button class="filter-btn active" data-filter="all" type="button">All</button>
+<button class="filter-btn" data-filter="frontend" type="button">Frontend</button>
+<button class="filter-btn" data-filter="uiux" type="button">UI/UX Design</button>
+<button class="filter-btn" data-filter="design" type="button">Design</button>
+<button class="filter-btn" data-filter="certificate" type="button">Certificates</button>
+</div>
+<div class="projects-grid" id="projectsGrid">
+<article class="project-card reveal" data-category="frontend" data-category-name="FRONTEND | HOME | PROJECTS" data-description="Website portofolio pribadi premium interaktif dengan ambient glow serta modern glassmorphism. Website dirancang dengan pendekatan visual modern, responsive layout, dan interaksi yang ringan." data-images="asset/frontend/tumpor.png" data-live="https://myqi-portofolio.vercel.app/" data-no-scroll-notice="true" data-tech="HTML|CSS|JAVASCRIPT" data-title="Portfolio Website">
+<div class="project-thumb">
+<img alt="Portfolio Website" loading="lazy" src="asset/frontend/tumpor.png"/>
+<span class="tag-float">Featured</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">Website</span>
+<h4>Portfolio Website</h4>
+<p>Website portofolio pribadi premium interaktif dengan ambient glow serta modern glassmorphism.</p>
+<div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="frontend" data-category-name="FRONTEND | HOME | PROJECTS" data-description="Aplikasi web kalkulator interaktif dengan antarmuka yang bersih, fungsionalitas perhitungan lengkap, dan tema visual modern." data-images="asset/frontend/tumkal.png|asset/frontend/fronkal1.png|asset/frontend/fronkal2.png" data-live="" data-no-scroll-notice="true" data-tech="HTML|CSS|JAVASCRIPT" data-title="Kalkulator Modern">
+<div class="project-thumb">
+<img alt="Kalkulator Website" loading="lazy" src="asset/frontend/tumkal.png"/>
+<span class="tag-float">Featured</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">Website</span>
+<h4>Kalkulator Web</h4>
+<p>Aplikasi kalkulator interaktif dengan antarmuka bersih dan tema visual modern.</p>
+<div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="uiux" data-category-name="UI/UX | HOME | DASHBOARD" data-description="Website car marketplace dirancang sebagai platform jual beli mobil dengan fitur lengkap seperti pencarian berdasarkan merek dan tipe, listing kendaraan, hingga layanan tambahan seperti tukar tambah dan pembiayaan. Desainnya informatif dan profesional." data-images="asset/porto/porcar.png" data-live="" data-tech="FIGMA|UI/UX DESIGN" data-title="MOCKUP SHOWROOM">
+<div class="project-thumb">
+<img alt="Mockup Showroom" loading="lazy" src="asset/porto/tumcar.png"/>
+<span class="tag-float">UI/UX</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">UI/UX Case</span>
+<h4>MOCKUP SHOWROOM</h4>
+<p>Website car marketplace dirancang sebagai platform jual beli mobil dengan fitur lengkap.</p>
+<div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="uiux" data-category-name="UI/UX | HOME | DASHBOARD" data-description="Situs web Limshion menampilkan desain yang bersih, modern, dan elegan bagi merek fesyen yang ingin tampil lebih profesional. Mengutamakan visual produk dan tata letak yang estetik." data-images="asset/porto/porfash.png" data-live="" data-tech="FIGMA|UI/UX DESIGN" data-title="Mockup Fashion">
+<div class="project-thumb">
+<img alt="Mockup Fashion" loading="lazy" src="asset/porto/tumfash.png"/>
+<span class="tag-float">UI/UX</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">UI/UX Case</span>
+<h4>MOCKUP FASHION</h4>
+<p>Situs web Limshion menampilkan desain yang bersih, modern, dan elegan bagi merek fesyen.</p>
+<div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="uiux" data-category-name="UI/UX | HOME | DASHBOARD" data-description="Situs web Santure ini dirancang dengan tampilan modern, navigasi yang mudah, dan fokus pada pengalaman pengguna—sehingga para pencinta alam dapat menemukan perlengkapan terbaik dengan cepat." data-images="asset/porto/porout.png" data-live="" data-tech="FIGMA|UI/UX DESIGN" data-title="MOCKUP OUTDOOR">
+<div class="project-thumb">
+<img alt="Mockup Outdoor" loading="lazy" src="asset/porto/tumout1.png"/>
+<span class="tag-float">UI/UX</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">UI/UX Case</span>
+<h4>MOCKUP OUTDOOR</h4>
+<p>Situs web Santure ini dirancang dengan tampilan modern dan navigasi outdoor yang praktis.</p>
+<div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="uiux" data-category-name="UI/UX | HOME | DASHBOARD" data-description="Mockup Halaman utama website galeri foto dengan tampilan modern dan elegan. Fokus pada eksplorasi visual fotografi HD." data-images="asset/porto/porgal1.png|asset/porto/porgal2.png|asset/porto/porgal3.png" data-live="" data-tech="FIGMA|UI/UX DESIGN" data-title="MOCKUP GALERI">
+<div class="project-thumb">
+<img alt="Mockup Galeri" loading="lazy" src="asset/porto/tumgal.png"/>
+<span class="tag-float">UI/UX</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">UI/UX Case</span>
+<h4>MOCKUP GALERI</h4>
+<p>Menampilkan halaman utama website galeri foto dengan eksplorasi tata letak modern.</p>
+<div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="uiux" data-category-name="UI/UX | HOME | DASHBOARD" data-description="Website kuliner modern berfokus pada visual makanan yang menarik, navigasi pemesanan interaktif, dan cabang lokasi restoran." data-images="asset/porto/porfood.png" data-live="" data-tech="FIGMA|UI/UX DESIGN" data-title="MOCKUP FOOD">
+<div class="project-thumb">
+<img alt="Mockup Food" loading="lazy" src="asset/porto/tumfood.png"/>
+<span class="tag-float">UI/UX</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">UI/UX Case</span>
+<h4>MOCKUP FOOD</h4>
+<p>Website food ini menampilkan desain modern dengan tema elegan yang fokus pada visual kuliner.</p>
+<div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">View Project</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain kaos ini menggunakan konsep simpel dan elegan dengan dominasi warna putih sebagai dasar. Tulisan “LOYALTY” ditampilkan besar di bagian tengah dengan gaya tegas, sehingga menjadi fokus utama..
 
-          <h3 class="details-title">Personal <span>Details</span></h3>
+Ilustrasi dua kuda berwarna merah yang saling berhadapan memberikan kesan kuat dan berani, sekaligus melambangkan kekuatan dan kesetiaan. Secara keseluruhan, desain terlihat minimalis namun tetap memiliki karakter yang jelas dan menarik." data-images="asset/desain/kaosl.jpeg" data-live="" data-no-scroll-notice="true" data-tech="PRINT READY|CANVA" data-title="Design Kaos Loyalty">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/kaosl.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Design Kaos Loyalty
+                    </h4>
+<p>
+Desain kaos ini menggunakan konsep simpel dan elegan dengan dominasi warna putih sebagai dasar.
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain kaos ini mengusung konsep sederhana dan modern dengan warna dasar abu-abu yang memberikan kesan netral dan stylish. Elemen grafis utama berupa tulisan dengan bentuk unik ditempatkan di bagian belakang sebagai fokus utama, sementara bagian depan dibuat lebih minimalis dengan teks kecil agar tetap terlihat rapi.
 
-          <div class="details-grid">
-            <div class="detail-column">
-              <div class="detail-item">
-                <span class="detail-label">Name</span>
-                <span class="detail-value">Muhammad Rizqih Ramadhan</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">Phone</span>
-                <span class="detail-value">+62 851-3495-3049</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">Place of Birth</span>
-                <span class="detail-value">Depok, Jawa Barat</span>
-              </div>
-            </div>
+Tata letak desain dibuat seimbang antara depan dan belakang, sehingga tidak terlalu ramai namun tetap memiliki identitas yang kuat. Secara keseluruhan, desain ini terlihat simpel, kekinian, dan mudah digunakan untuk berbagai aktivitas." data-images="asset/desain/kaosabu1.jpeg|asset/desain/kaosabu2.jpeg|asset/desain/kaosabu3.jpeg" data-live="" data-no-scroll-notice="true" data-tech="PRINT READY|CANVA" data-title="Design Kaos Katar">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/kaosabu1.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Design Kaos Katar
+                    </h4>
+<p>
+                       Desain kaos ini mengusung konsep sederhana dan modern dengan warna dasar abu-abu yang memberikan kesan netral dan stylish. 
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain kaos ini menggunakan konsep unik dan kreatif dengan ilustrasi tangan yang dibentuk menyerupai bebek sebagai elemen utama. Warna hitam pada kaos dipadukan dengan grafis berwarna merah dan kuning sehingga terlihat kontras dan menarik perhatian.
 
-            <div class="detail-column">
-              <div class="detail-item">
-                <span class="detail-label">IPK</span>
-                <span class="detail-value">3.71</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">Education</span>
-                <span class="detail-value">Universitas Bina Sarana Informatika</span>
-              </div>
-              <div class="detail-item connect-item">
-                <span class="detail-label">Connect</span>
-                <div class="social-links">
-                  <a href="https://www.linkedin.com/in/muhammad-rizqih-ramadhan-4406862ba/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
-                  <a href="https://www.instagram.com/myqisites/" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
-                  <a href="mailto:mhmdrizqih.rn@gmail.com" aria-label="Email">✉</a>
-                </div>
-              </div>
-            </div>
+Tata letak dibuat sederhana, dengan desain besar di bagian belakang sebagai fokus utama, sementara bagian depan dibuat lebih kecil agar tetap minimalis. Secara keseluruhan, desain ini terlihat simpel, berbeda, dan memiliki karakter yang kuat." data-images="asset/desain/kaoshd1.jpeg|asset/desain/kaoshd2.jpeg|asset/desain/kaoshd3.jpeg" data-live="" data-no-scroll-notice="true" data-tech="PRINT READY|CANVA" data-title="Design Kaos Handduck">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/kaoshd1.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Design Kaos Handduck
+                    </h4>
+<p>
+                        Desain kaos ini menggunakan konsep unik dan kreatif dengan ilustrasi tangan yang dibentuk menyerupai bebek sebagai elemen utama.
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain ini menggunakan tampilan sederhana dengan warna merah dan krem yang menarik. Informasi menu disusun rapi sehingga mudah dibaca, dengan gambar produk yang jelas untuk menarik perhatian.
+
+Tata letaknya bersih dan terstruktur, menampilkan nama menu, harga, serta kontak pemesanan secara singkat dan jelas sehingga mudah dipahami oleh konsumen." data-images="asset/desain/mnc.jpeg" data-live="" data-no-scroll-notice="true" data-tech="PRINT READY|CANVA" data-title="Design Menu Crispy'c">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/mnc.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Design Menu Crispy'c
+                    </h4>
+<p>
+                        Desain ini menggunakan tampilan sederhana dengan warna merah dan krem yang menarik. Informasi menu disusun rapi sehingga mudah dibaca
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain ini menggunakan konsep sederhana dan modern dengan dominasi warna merah, krem, dan putih yang memberikan kesan hangat serta menggugah selera. Penempatan gambar produk dibuat besar dan jelas untuk menarik perhatian, sementara menu dan informasi disusun rapi agar mudah dibaca.
+
+Tata letak dibagi menjadi beberapa bagian seperti menu, deskripsi, dan kontak, sehingga informasi tersampaikan dengan jelas. Secara keseluruhan, desain terlihat bersih, menarik, dan tetap profesional." data-images="asset/desain/bs1.jpeg|asset/desain/bs2.jpeg" data-live="" data-no-scroll-notice="true" data-tech="PRINT READY|CANVA" data-title="Brosur Cripy'c">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/bs1.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Brosur Cripy'c
+                    </h4>
+<p>
+                        Desain ini menggunakan konsep sederhana dan modern dengan dominasi warna merah, krem, dan putih yang memberikan kesan hangat serta menggugah selera.
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain poster ini menggunakan konsep sederhana dan formal dengan dominasi warna merah dan putih yang mencerminkan semangat nasionalisme. Judul utama ditampilkan besar dan tegas sehingga menjadi fokus utama.
+
+Elemen visual seperti siluet Monas dan gedung kota memperkuat nuansa Indonesia, sementara tata letak yang rapi membuat informasi mudah dibaca dan terlihat bersih." data-images="asset/desain/bnrk.jpeg" data-live="" data-no-scroll-notice="true" data-tech="PRINT READY|CANVA" data-title="Benner 17 Agustus">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/bnrk.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Benner 17 Agustus
+                    </h4>
+<p>
+                        Desain poster ini menggunakan konsep sederhana dan formal dengan dominasi warna merah dan putih yang mencerminkan semangat nasionalisme
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="design" data-category-name="DESIGN | MERCHANDISE" data-description="Desain poster ini dibuat dengan konsep sederhana namun tetap formal, menggunakan kombinasi warna merah dan putih yang mencerminkan identitas nasional. Judul utama “Jalan Santai” ditampilkan dengan ukuran besar dan tegas sehingga mudah menarik perhatian, sementara informasi penting seperti waktu dan lokasi disusun secara rapi dan jelas agar mudah dibaca.
+
+Elemen visual seperti ilustrasi pelari, bendera, dan hadiah doorprize digunakan sebagai pendukung tanpa mengurangi kesan formal. Tata letak yang terstruktur serta penggunaan ruang yang seimbang membuat desain terlihat bersih, informatif, dan tetap menarik untuk menyampaikan informasi acara kepada masyarakat." data-images="asset/desain/posjs.jpeg" data-live="" data-tech="PRINT READY|CANVA" data-title="Poster Jalan Santai">
+<!-- PROJECT IMAGE -->
+<div class="project-thumb">
+<img alt="Design Kaos Loyalty" loading="lazy" src="asset/desain/posjs.jpeg"/>
+<span class="tag-float">
+                        Design
+                    </span>
+</div>
+<!-- PROJECT INFORMATION -->
+<div class="project-body">
+<span class="eyebrow">
+                        Merchandise Design
+                    </span>
+<h4>
+                        Poster Jalan Santai
+                    </h4>
+<p>
+                        Desain poster ini dibuat dengan konsep sederhana namun tetap formal, menggunakan kombinasi warna merah dan putih yang mencerminkan identitas nasional.
+                    </p>
+<!-- TAGS -->
+<div class="tag-list">
+<span>
+                            Print Ready
+                        </span>
+<span>
+                            Canva
+                        </span>
+</div>
+<!-- ACTION -->
+<div class="project-actions">
+<button class="btn btn-primary view-project" type="button">
+                            Lihat Desain
+                        </button>
+</div>
+</div>
+</article><article class="project-card reveal" data-category="certificate" data-category-name="CERTIFICATE | ENTREPRENEUR" data-description="Sertifikat Entrepreneur yang menunjukkan pemahaman dasar tentang kewirausahaan, pengelolaan bisnis, dan ide inovasi." data-images="asset/serti/serent.jpg" data-live="" data-no-scroll-notice="true" data-tech="SEMINAR|UBSI|2026" data-title="Entrepreneur">
+<div class="project-thumb">
+<img alt="Entrepreneur Certificate" loading="lazy" src="asset/serti/serent.jpg"/>
+<span class="tag-float">Certificate</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">Certificate · 2026</span>
+<h4>Entrepreneur</h4>
+<p>Sertifikat Entrepreneur mencakup pemahaman dasar wirausaha &amp; manajemen bisnis.</p>
+<div class="tag-list"><span>Seminar</span><span>UBSI</span><span>2026</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">Lihat Sertifikat</button></div>
+</div>
+</article>
+<article class="project-card reveal" data-category="certificate" data-category-name="CERTIFICATE | MAGANG" data-description="Sertifikat magang resmi dari PT. Delta Digital Teknologi yang menunjukkan keterlibatan langsung pada rekayasa perangkat lunak." data-images="asset/serti/sertifdel.jpg" data-live="" data-no-scroll-notice="true" data-tech="MAGANG|DELTA DIGITAL|2024" data-title="PT. Delta Digital Tech">
+<div class="project-thumb">
+<img alt="PT Delta Digital Technology Certificate" loading="lazy" src="asset/serti/sertifdel.jpg"/>
+<span class="tag-float">Certificate</span>
+</div>
+<div class="project-body">
+<span class="eyebrow">Certificate · 2024</span>
+<h4>PT. Delta Digital Tech</h4>
+<p>Sertifikat magang dari PT. Delta Digital Teknologi bidang IT &amp; Software Development.</p>
+<div class="tag-list"><span>Magang</span><span>Delta Digital</span><span>2024</span></div>
+<div class="project-actions"><button class="btn btn-primary view-project" type="button">Lihat Sertifikat</button></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-head">
+<span class="section-tag reveal">Get In Touch</span>
+<h2 class="reveal">Let's Work <span class="accent">Together</span></h2>
+<p class="reveal">Siap mendiskusikan ide proyek web modern Anda, antarmuka UI/UX, atau kolaborasi profesional lainnya.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-card reveal">
+<div class="contact-icon">
+<iconify-icon height="24" icon="lucide:mail" style="color:#ffffff" width="24"></iconify-icon>
+</div>
+<div class="label">EMAIL ME</div>
+<div class="value">mhmdrizqih.rn@gmail.com</div>
+<div class="sub">Respon cepat via Email</div>
+</div>
+<div class="contact-card reveal">
+<div class="contact-icon">
+<iconify-icon height="24" icon="lucide:phone" style="color:#ffffff" width="24"></iconify-icon>
+</div>
+<div class="label">CALL / WHATSAPP</div>
+<div class="value">+62 851-3495-3049</div>
+<div class="sub">Senin - Sabtu (08.00 - 20.00 WIB)</div>
+</div>
+<div class="contact-card reveal">
+<div class="contact-icon">
+<iconify-icon height="24" icon="lucide:map-pin" style="color:#ffffff" width="24"></iconify-icon>
+</div>
+<div class="label">LOCATION</div>
+<div class="value">Depok, Jawa Barat</div>
+<div class="sub">Indonesia</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+<div class="container">
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="logo" href="#home">
+<img alt="Logo MR" class="logo-img" src="asset/logo.png"/>
+</a>
+<span>Muhammad Rizqih Ramadhan</span>
+</div>
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="footer-copy">
+            © 2026 Muhammad Rizqih Ramadhan. All rights reserved.
           </div>
-
-          <div class="about-stats">
-            <div class="stat-card active">
-              <div class="stat-number">
-                <span class="num" data-count="14">0</span>
-              </div>
-              <h3>Projects Finished</h3>
-              <p>Interactive and modern apps</p>
-            </div>
-
-            <div class="stat-card">
-              <div class="stat-number">
-                <span class="num" data-count="5">0</span>
-              </div>
-              <h3>Certificates Earned</h3>
-              <p>Competency verified badges</p>
-            </div>
-          </div>
+</div>
+</div>
+</footer>
+</div>
+<!-- ===================== PROJECT DETAIL MODAL ===================== -->
+<div aria-hidden="true" aria-labelledby="modalTitle" class="project-modal" id="projectModal" role="dialog">
+<div class="project-modal-backdrop" id="projectModalBackdrop"></div>
+<div class="project-modal-box">
+<button aria-label="Close modal" class="project-modal-close" id="projectModalClose">
+<span>×</span>
+</button>
+<div class="project-modal-content">
+<div class="modal-title-row">
+<h2 id="modalTitle">Project Title</h2>
+<a class="modal-live" href="#" id="modalLive" rel="noopener" target="_blank">LIVE</a>
+</div>
+<div class="modal-category" id="modalCategory">Category</div>
+<div class="modal-divider"></div>
+<span class="modal-label">DESCRIPTION</span>
+<p id="modalDescription">Project detail description text goes here...</p>
+<div class="modal-content-spacer"></div>
+<div class="modal-tech">
+<div class="modal-divider"></div>
+<span class="modal-label">TECHNOLOGY STACK</span>
+<div class="modal-tech-list" id="modalTech"></div>
+</div>
+</div>
+<div class="project-modal-visual">
+<button aria-label="Previous image" class="modal-nav modal-prev" id="modalPrev">
+<span>‹</span>
+</button>
+<div class="modal-image-frame">
+<div class="modal-image-scroll">
+<img alt="Project Preview" id="modalImage" src=""/>
+</div>
+</div>
+<button aria-label="Next image" class="modal-nav modal-next" id="modalNext">
+<span>›</span>
+</button>
+<div class="modal-image-counter" id="modalCounter">1 / 1</div>
+<div class="scroll-notice" id="scrollNotice">
+<span class="scroll-notice-arrow">↓</span> Scroll down for details
         </div>
-      </section>
-
-      <!-- ===================== SKILLS ===================== -->
-      <section class="skills" id="skills">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-tag reveal">Abilities &amp; Skills</span>
-            <h2 class="reveal">Technical <span class="accent">Frameworks</span></h2>
-            <p class="reveal">Kumpulan teknologi dasar dan lanjutan yang saya gunakan untuk mengimplementasikan solusi visual interaktif dan andal.</p>
-          </div>
-
-          <div class="skills-grid">
-            <div class="skill-card reveal" data-percent="95">
-              <div class="skill-top">
-                <div><h4>HTML5 &amp; CSS3</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="simple-icons:html5" width="28" height="28" style="color: #ff3700;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>95%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="80">
-              <div class="skill-top">
-                <div><h4>Bootstrap</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="bi:bootstrap-fill" width="26" height="26" style="color: #6600ff;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>80%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="100">
-              <div class="skill-top">
-                <div><h4>Figma</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="logos:figma" width="26" height="26"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>100%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="75">
-              <div class="skill-top">
-                <div><h4>GitHub</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="bi:github" width="26" height="26" style="color: #ffffff;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>75%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="100">
-              <div class="skill-top">
-                <div><h4>Canva</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="simple-icons:canva" width="26" height="26" style="color: #00e5ff;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>100%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="90">
-              <div class="skill-top">
-                <div><h4>Ibis Paint</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="lucide:brush" width="26" height="26" style="color: #d4990f;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>90%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="50">
-              <div class="skill-top">
-                <div><h4>Java</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="fa6-brands:java" width="26" height="26" style="color: #ff7b00;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>50%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-
-            <div class="skill-card reveal" data-percent="50">
-              <div class="skill-top">
-                <div><h4>Python</h4><span>Estimated Ability</span></div>
-                <div class="skill-icon"><iconify-icon icon="simple-icons:python" width="26" height="26" style="color: #6600ff;"></iconify-icon></div>
-              </div>
-              <div class="skill-meta"><span>Expertise Level</span><span>50%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill"></div></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== PROJECTS ===================== -->
-      <section class="projects" id="projects">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-tag reveal">Curated Case Studies</span>
-            <h2 class="reveal">Featured <span class="accent">Projects &amp; Certificates</span></h2>
-            <p class="reveal">Galeri karya pilihan mencakup sistem antarmuka web, integrasi database, hingga sertifikasi kompetensi resmi.</p>
-          </div>
-
-          <div class="filter-row reveal">
-            <button type="button" class="filter-btn active" data-filter="all">All</button>
-            <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
-            <button type="button" class="filter-btn" data-filter="uiux">UI/UX Design</button>
-            <button type="button" class="filter-btn" data-filter="design">Design</button>
-            <button type="button" class="filter-btn" data-filter="certificate">Certificates</button>
-          </div>
-
-          <div class="projects-grid" id="projectsGrid">
-            <article class="project-card reveal" data-category="frontend" data-title="Portfolio Website" data-category-name="FRONTEND | HOME | PROJECTS" data-live="https://myqi-portofolio.vercel.app/" data-description="Website portofolio pribadi premium interaktif dengan ambient glow serta modern glassmorphism. Website dirancang dengan pendekatan visual modern, responsive layout, dan interaksi yang ringan." data-tech="HTML|CSS|JAVASCRIPT" data-images="asset/frontend/tumpor.png" data-no-scroll-notice="true">
-              <div class="project-thumb">
-                <img src="asset/frontend/tumpor.png" alt="Portfolio Website" loading="lazy">
-                <span class="tag-float">Featured</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">Website</span>
-                <h4>Portfolio Website</h4>
-                <p>Website portofolio pribadi premium interaktif dengan ambient glow serta modern glassmorphism.</p>
-                <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="frontend" data-title="Kalkulator Modern" data-category-name="FRONTEND | HOME | PROJECTS" data-live="" data-description="Aplikasi web kalkulator interaktif dengan antarmuka yang bersih, fungsionalitas perhitungan lengkap, dan tema visual modern." data-tech="HTML|CSS|JAVASCRIPT" data-images="asset/frontend/tumkal.png|asset/frontend/fronkal1.png|asset/frontend/fronkal2.png" data-no-scroll-notice="true">
-              <div class="project-thumb">
-                <img src="asset/frontend/tumkal.png" alt="Kalkulator Website" loading="lazy">
-                <span class="tag-float">Featured</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">Website</span>
-                <h4>Kalkulator Web</h4>
-                <p>Aplikasi kalkulator interaktif dengan antarmuka bersih dan tema visual modern.</p>
-                <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="uiux" data-title="MOCKUP SHOWROOM" data-category-name="UI/UX | HOME | DASHBOARD" data-live="" data-description="Website car marketplace dirancang sebagai platform jual beli mobil dengan fitur lengkap seperti pencarian berdasarkan merek dan tipe, listing kendaraan, hingga layanan tambahan seperti tukar tambah dan pembiayaan. Desainnya informatif dan profesional." data-tech="FIGMA|UI/UX DESIGN" data-images="asset/porto/porcar.png">
-              <div class="project-thumb">
-                <img src="asset/porto/tumcar.png" alt="Mockup Showroom" loading="lazy">
-                <span class="tag-float">UI/UX</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">UI/UX Case</span>
-                <h4>MOCKUP SHOWROOM</h4>
-                <p>Website car marketplace dirancang sebagai platform jual beli mobil dengan fitur lengkap.</p>
-                <div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="uiux" data-title="Mockup Fashion" data-category-name="UI/UX | HOME | DASHBOARD" data-live="" data-description="Situs web Limshion menampilkan desain yang bersih, modern, dan elegan bagi merek fesyen yang ingin tampil lebih profesional. Mengutamakan visual produk dan tata letak yang estetik." data-tech="FIGMA|UI/UX DESIGN" data-images="asset/porto/porfash.png">
-              <div class="project-thumb">
-                <img src="asset/porto/tumfash.png" alt="Mockup Fashion" loading="lazy">
-                <span class="tag-float">UI/UX</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">UI/UX Case</span>
-                <h4>MOCKUP FASHION</h4>
-                <p>Situs web Limshion menampilkan desain yang bersih, modern, dan elegan bagi merek fesyen.</p>
-                <div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="uiux" data-title="MOCKUP OUTDOOR" data-category-name="UI/UX | HOME | DASHBOARD" data-live="" data-description="Situs web Santure ini dirancang dengan tampilan modern, navigasi yang mudah, dan fokus pada pengalaman pengguna—sehingga para pencinta alam dapat menemukan perlengkapan terbaik dengan cepat." data-tech="FIGMA|UI/UX DESIGN" data-images="asset/porto/porout.png">
-              <div class="project-thumb">
-                <img src="asset/porto/tumout1.png" alt="Mockup Outdoor" loading="lazy">
-                <span class="tag-float">UI/UX</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">UI/UX Case</span>
-                <h4>MOCKUP OUTDOOR</h4>
-                <p>Situs web Santure ini dirancang dengan tampilan modern dan navigasi outdoor yang praktis.</p>
-                <div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="uiux" data-title="MOCKUP GALERI" data-category-name="UI/UX | HOME | DASHBOARD" data-live="" data-description="Mockup Halaman utama website galeri foto dengan tampilan modern dan elegan. Fokus pada eksplorasi visual fotografi HD." data-tech="FIGMA|UI/UX DESIGN" data-images="asset/porto/porgal1.png|asset/porto/porgal2.png|asset/porto/porgal3.png">
-              <div class="project-thumb">
-                <img src="asset/porto/tumgal.png" alt="Mockup Galeri" loading="lazy">
-                <span class="tag-float">UI/UX</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">UI/UX Case</span>
-                <h4>MOCKUP GALERI</h4>
-                <p>Menampilkan halaman utama website galeri foto dengan eksplorasi tata letak modern.</p>
-                <div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="uiux" data-title="MOCKUP FOOD" data-category-name="UI/UX | HOME | DASHBOARD" data-live="" data-description="Website kuliner modern berfokus pada visual makanan yang menarik, navigasi pemesanan interaktif, dan cabang lokasi restoran." data-tech="FIGMA|UI/UX DESIGN" data-images="asset/porto/porfood.png">
-              <div class="project-thumb">
-                <img src="asset/porto/tumfood.png" alt="Mockup Food" loading="lazy">
-                <span class="tag-float">UI/UX</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">UI/UX Case</span>
-                <h4>MOCKUP FOOD</h4>
-                <p>Website food ini menampilkan desain modern dengan tema elegan yang fokus pada visual kuliner.</p>
-                <div class="tag-list"><span>Figma</span><span>UI/UX Design</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">View Project</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="certificate" data-title="Entrepreneur" data-category-name="CERTIFICATE | ENTREPRENEUR" data-live="" data-description="Sertifikat Entrepreneur yang menunjukkan pemahaman dasar tentang kewirausahaan, pengelolaan bisnis, dan ide inovasi." data-tech="SEMINAR|UBSI|2026" data-images="asset/serti/serent.jpg" data-no-scroll-notice="true">
-              <div class="project-thumb">
-                <img src="asset/serti/serent.jpg" alt="Entrepreneur Certificate" loading="lazy">
-                <span class="tag-float">Certificate</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">Certificate · 2026</span>
-                <h4>Entrepreneur</h4>
-                <p>Sertifikat Entrepreneur mencakup pemahaman dasar wirausaha &amp; manajemen bisnis.</p>
-                <div class="tag-list"><span>Seminar</span><span>UBSI</span><span>2026</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">Lihat Sertifikat</button></div>
-              </div>
-            </article>
-
-            <article class="project-card reveal" data-category="certificate" data-title="PT. Delta Digital Tech" data-category-name="CERTIFICATE | MAGANG" data-live="" data-description="Sertifikat magang resmi dari PT. Delta Digital Teknologi yang menunjukkan keterlibatan langsung pada rekayasa perangkat lunak." data-tech="MAGANG|DELTA DIGITAL|2024" data-images="asset/serti/sertifdel.jpg" data-no-scroll-notice="true">
-              <div class="project-thumb">
-                <img src="asset/serti/sertifdel.jpg" alt="PT Delta Digital Technology Certificate" loading="lazy">
-                <span class="tag-float">Certificate</span>
-              </div>
-              <div class="project-body">
-                <span class="eyebrow">Certificate · 2024</span>
-                <h4>PT. Delta Digital Tech</h4>
-                <p>Sertifikat magang dari PT. Delta Digital Teknologi bidang IT &amp; Software Development.</p>
-                <div class="tag-list"><span>Magang</span><span>Delta Digital</span><span>2024</span></div>
-                <div class="project-actions"><button type="button" class="btn btn-primary view-project">Lihat Sertifikat</button></div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== CONTACT ===================== -->
-      <section class="contact" id="contact">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-tag reveal">Get In Touch</span>
-            <h2 class="reveal">Let's Work <span class="accent">Together</span></h2>
-            <p class="reveal">Siap mendiskusikan ide proyek web modern Anda, antarmuka UI/UX, atau kolaborasi profesional lainnya.</p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-card reveal">
-              <div class="contact-icon">
-                <iconify-icon icon="lucide:mail" width="24" height="24" style="color:#ffffff"></iconify-icon>
-              </div>
-              <div class="label">EMAIL ME</div>
-              <div class="value">mhmdrizqih.rn@gmail.com</div>
-              <div class="sub">Respon cepat via Email</div>
-            </div>
-
-            <div class="contact-card reveal">
-              <div class="contact-icon">
-                <iconify-icon icon="lucide:phone" width="24" height="24" style="color:#ffffff"></iconify-icon>
-              </div>
-              <div class="label">CALL / WHATSAPP</div>
-              <div class="value">+62 851-3495-3049</div>
-              <div class="sub">Senin - Sabtu (08.00 - 20.00 WIB)</div>
-            </div>
-
-            <div class="contact-card reveal">
-              <div class="contact-icon">
-                <iconify-icon icon="lucide:map-pin" width="24" height="24" style="color:#ffffff"></iconify-icon>
-              </div>
-              <div class="label">LOCATION</div>
-              <div class="value">Depok, Jawa Barat</div>
-              <div class="sub">Indonesia</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-inner">
-          <div class="footer-brand">
-            <a href="#home" class="logo">
-              <img src="asset/logo.png" alt="Logo MR" class="logo-img">
-            </a>
-            <span>Muhammad Rizqih Ramadhan</span>
-          </div>
-
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
-
-          <div class="footer-copy">
-            &copy; 2026 Muhammad Rizqih Ramadhan. All rights reserved.
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <!-- ===================== PROJECT DETAIL MODAL ===================== -->
-  <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-    <div class="project-modal-backdrop" id="projectModalBackdrop"></div>
-    <div class="project-modal-box">
-      <button class="project-modal-close" id="projectModalClose" aria-label="Close modal">
-        <span>&times;</span>
-      </button>
-
-      <div class="project-modal-content">
-        <div class="modal-title-row">
-          <h2 id="modalTitle">Project Title</h2>
-          <a href="#" target="_blank" rel="noopener" class="modal-live" id="modalLive">LIVE</a>
-        </div>
-        <div class="modal-category" id="modalCategory">Category</div>
-        <div class="modal-divider"></div>
-
-        <span class="modal-label">DESCRIPTION</span>
-        <p id="modalDescription">Project detail description text goes here...</p>
-
-        <div class="modal-content-spacer"></div>
-
-        <div class="modal-tech">
-          <div class="modal-divider"></div>
-          <span class="modal-label">TECHNOLOGY STACK</span>
-          <div class="modal-tech-list" id="modalTech"></div>
-        </div>
-      </div>
-
-      <div class="project-modal-visual">
-        <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous image">
-          <span>&lsaquo;</span>
-        </button>
-
-        <div class="modal-image-frame">
-          <div class="modal-image-scroll">
-            <img src="" alt="Project Preview" id="modalImage">
-          </div>
-        </div>
-
-        <button class="modal-nav modal-next" id="modalNext" aria-label="Next image">
-          <span>&rsaquo;</span>
-        </button>
-
-        <div class="modal-image-counter" id="modalCounter">1 / 1</div>
-        <div class="scroll-notice" id="scrollNotice">
-          <span class="scroll-notice-arrow">↓</span> Scroll down for details
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
